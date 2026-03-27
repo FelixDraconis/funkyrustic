@@ -54,7 +54,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 0.8rem 1.1rem;
+  padding: 0.55rem 1.1rem;
   margin-top: 0.75rem;
   border: 1px solid rgba(255, 244, 230, 0.08);
   border-radius: 999px;
@@ -78,12 +78,17 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 8.5rem;
+  height: 3.7rem;
+  overflow: hidden;
 }
 
 .brand-mark {
-  width: 2rem;
-  height: 2rem;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  transform: scale(1.02);
+  transform-origin: center;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.28));
 }
 
@@ -166,6 +171,16 @@ textarea {
   margin: 1.4rem 0 0;
 }
 
+.hero-tagline {
+  margin: 1.15rem 0 0;
+  color: var(--accent-dark);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -223,14 +238,30 @@ textarea {
   line-height: 1.7;
 }
 
+.proof-section {
+  margin: 0 0 2.5rem;
+}
+
+.proof-heading {
+  max-width: 42rem;
+  margin-bottom: 1rem;
+}
+
 .proof-strip {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 0.75rem;
-  margin: 0 0 2.5rem;
 }
 
-.proof-strip p {
+.proof-strip-logos {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.proof-strip-logos-selected {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.proof-strip a {
   margin: 0;
   padding: 0.95rem 0.75rem;
   border: 1px solid var(--line);
@@ -239,6 +270,53 @@ textarea {
   color: var(--muted);
   text-align: center;
   font-weight: 600;
+}
+
+.proof-strip a:hover {
+  color: var(--accent-dark);
+  border-color: rgba(115, 53, 28, 0.24);
+  background: rgba(255, 250, 244, 0.86);
+}
+
+.proof-strip-logos .proof-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 5.25rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(255, 234, 215, 0.12);
+  border-radius: 999px;
+  background:
+    linear-gradient(145deg, rgba(86, 44, 26, 0.98), rgba(58, 28, 17, 0.96));
+  box-shadow: 0 18px 40px rgba(55, 27, 17, 0.18);
+}
+
+.proof-strip-logos .proof-logo-card:hover {
+  border-color: rgba(255, 234, 215, 0.26);
+  background:
+    linear-gradient(145deg, rgba(103, 52, 31, 0.98), rgba(69, 33, 19, 0.97));
+}
+
+.proof-strip-logos .proof-logo {
+  width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.28));
+}
+
+.proof-strip-logos .proof-logo-standard {
+  height: 2.45rem;
+}
+
+.proof-strip-logos .proof-logo-compact {
+  height: 2.1rem;
+}
+
+.proof-strip-logos .proof-logo-wide {
+  height: 2.2rem;
+}
+
+.proof-strip-logos .proof-logo-retro {
+  transform: scale(0.9);
 }
 
 .section {
@@ -326,6 +404,63 @@ textarea {
 
 .work-grid {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.work-grid-credits {
+  margin-bottom: 1.5rem;
+}
+
+.company-section-heading {
+  margin-top: 2rem;
+}
+
+.company-grid {
+  margin-bottom: 1.5rem;
+}
+
+.company-card {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  background:
+    linear-gradient(145deg, rgba(19, 15, 13, 0.98), rgba(37, 28, 23, 0.95));
+  color: #fff4e6;
+}
+
+.company-card p {
+  color: rgba(255, 244, 230, 0.74);
+}
+
+.company-logo {
+  width: 100%;
+  height: 2.8rem;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.company-credit-list {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.company-card .company-credit-list a {
+  color: #fff4e6;
+  font-weight: 700;
+}
+
+.company-card .company-credit-list a:hover {
+  color: #ffd8b7;
+}
+
+.company-credit-role,
+.company-credit-note {
+  display: block;
+  margin-top: 0.2rem;
+  color: rgba(255, 244, 230, 0.72);
+  line-height: 1.5;
 }
 
 .work-card-featured {
@@ -468,6 +603,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .proof-strip-logos-selected {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     padding-top: 3rem;
   }
@@ -525,8 +664,7 @@ textarea {
   }
 
   .brand-mark {
-    width: 1.85rem;
-    height: 1.85rem;
+    transform: scale(0.98);
   }
 
   .portrait-image {
