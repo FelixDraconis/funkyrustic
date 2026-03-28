@@ -1203,6 +1203,13 @@ textarea {
   object-fit: contain;
 }
 
+.partner-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
 .partner-logo-li-ortega {
   max-height: 3.9rem;
 }

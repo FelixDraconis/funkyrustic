@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260328-13" />
+    <link rel="stylesheet" href="styles.css?v=20260328-14" />
   </head>
   <body>
     <div class="site-shell">
@@ -200,11 +200,17 @@
               rel="noreferrer"
               aria-label="Visit Unlock Audio"
             >
-              <img
-                class="partner-logo partner-logo-unlock"
-                src="assets/companylogos/logo_partner_unlock_audio.png.avif"
-                alt="Unlock Audio"
-              />
+              <picture class="partner-logo-wrap partner-logo-unlock-wrap">
+                <source
+                  media="(max-width: 640px)"
+                  srcset="assets/companylogos/logo_partner_unlock_audio_mobile.png"
+                />
+                <img
+                  class="partner-logo partner-logo-unlock"
+                  src="assets/companylogos/logo_partner_unlock_audio.png.avif"
+                  alt="Unlock Audio"
+                />
+              </picture>
               <div class="partner-copy">
                 <p class="partner-name">Unlock Audio</p>
                 <p class="partner-text">
