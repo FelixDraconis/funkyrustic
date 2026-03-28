@@ -1230,6 +1230,20 @@ textarea {
   line-height: 1.55;
 }
 
+.about-endcap {
+  padding-top: 0.5rem;
+}
+
+.about-endcap-block {
+  display: grid;
+  justify-items: start;
+  gap: 0.85rem;
+}
+
+.about-endcap-block .section-text {
+  margin: 0;
+}
+
 .sort-button {
   display: inline-flex;
   align-items: center;
