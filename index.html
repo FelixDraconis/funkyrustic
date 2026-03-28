@@ -27,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260328-11" />
+    <link rel="stylesheet" href="styles.css?v=20260328-15" />
   </head>
   <body>
     <div class="site-shell">
@@ -76,23 +76,63 @@
             </div>
           </div>
 
-          <aside class="hero-card hero-card-spotlight" aria-label="Quick introduction">
-            <p class="card-label">Work With Us</p>
-            <h2>Bring Funky Rustic in when the project needs strong ideas, reliable execution, and senior audio judgment.</h2>
-            <p>
-              Projects can scale from music and sound design to voice, casting,
-              production support, and broader creative problem-solving.
-            </p>
-            <ul class="mini-list">
-              <li>Games, film, and interactive media</li>
-              <li>Remote or onsite as needed</li>
-              <li>From concept to final mix</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="button button-primary" href="contact.html">Contact Us</a>
-              <a class="button button-secondary" href="collaborate.html">What We Do</a>
-              <a class="button button-secondary" href="work.html">Hear More</a>
-            </div>
+          <aside class="hero-side-column" aria-label="Work with Funky Rustic">
+            <article class="hero-card album-carousel album-carousel-home" data-album-carousel>
+              <div class="album-carousel-stage">
+                <div class="album-slide is-active" data-album-slide>
+                  <div class="album-widget-media">
+                    <a
+                      class="album-cover-shell"
+                      href="#"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Open album on Bandcamp"
+                      data-album-image-link
+                    >
+                      <img class="album-cover" src="" alt="" data-album-image />
+                    </a>
+                    <div class="album-dots" aria-label="Album positions" data-album-dots></div>
+                  </div>
+                  <div class="album-meta">
+                    <h2 id="album-spotlight-title" data-album-title>Loading album...</h2>
+                    <div class="album-carousel-actions">
+                      <button class="button button-secondary album-carousel-nav" type="button" data-album-prev>
+                        &lt;
+                      </button>
+                      <a
+                        class="album-link-icon"
+                        href="#"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Open album on Bandcamp"
+                        title="Bandcamp"
+                        data-album-link
+                      >
+                        <img src="assets/linklogos/bandcamp_circle_128.png" alt="" />
+                      </a>
+                      <button class="button button-secondary album-carousel-nav" type="button" data-album-next>
+                        &gt;
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="hero-card hero-card-spotlight">
+              <p class="card-label">Work With Us</p>
+              <h2>Bring Funky Rustic in when the audio needs to land.</h2>
+              <p>
+                Music, sound, voice, casting, and production support shaped for games,
+                film, and interactive media.
+              </p>
+
+              <div class="hero-actions hero-actions-top">
+                <a class="button button-primary" href="contact.html">Contact Us</a>
+                <a class="button button-secondary" href="collaborate.html">What We Do</a>
+                <a class="button button-secondary" href="work.html">Hear More</a>
+              </div>
+            </article>
           </aside>
         </section>
 
@@ -185,5 +225,6 @@
         </div>
       </footer>
     </div>
+    <script src="script.js?v=20260328-2"></script>
   </body>
 </html>
