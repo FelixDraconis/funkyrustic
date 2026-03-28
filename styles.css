@@ -118,7 +118,7 @@ textarea {
 
 .hero-side-column {
   display: grid;
-  gap: 1rem;
+  gap: 1.35rem;
   align-content: start;
   justify-items: end;
 }
@@ -340,6 +340,22 @@ textarea {
   border-color: rgba(115, 53, 28, 0.14);
   background: rgba(255, 250, 244, 0.68);
   color: var(--accent-dark);
+}
+
+.button-mobile-only {
+  display: none;
+}
+
+.button-mobile-accent {
+  border-color: rgba(77, 124, 87, 0.16);
+  background: linear-gradient(145deg, rgba(224, 235, 226, 0.96), rgba(210, 226, 214, 0.92));
+  color: #456d4e;
+  box-shadow: 0 12px 24px rgba(56, 86, 61, 0.1);
+}
+
+.button-mobile-accent:hover {
+  border-color: rgba(77, 124, 87, 0.26);
+  background: linear-gradient(145deg, rgba(230, 240, 231, 0.98), rgba(217, 231, 220, 0.94));
 }
 
 .hero-card {
@@ -720,7 +736,7 @@ textarea {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 10.4rem;
+  min-height: 11.2rem;
   padding: 0.7rem;
   border-radius: 20px;
   background:
@@ -744,8 +760,8 @@ textarea {
 .album-cover {
   display: block;
   width: 100%;
-  max-width: 8.75rem;
-  max-height: 8.75rem;
+  max-width: 9.4rem;
+  max-height: 9.4rem;
   object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.24);
@@ -1652,5 +1668,13 @@ textarea {
 
   .album-carousel-home {
     display: none;
+  }
+
+  .hero-pill-row {
+    display: none;
+  }
+
+  .button-mobile-only {
+    display: inline-flex;
   }
 }

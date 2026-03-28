@@ -70,6 +70,8 @@ for (const table of sortableTables) {
 const albumCarousel = document.querySelector("[data-album-carousel]");
 
 if (albumCarousel instanceof HTMLElement) {
+  const albumChoiceKey = "funkyRusticAlbumChoice";
+  const albumChoiceTtlMs = 60 * 60 * 1000;
   const prevButton = albumCarousel.querySelector("[data-album-prev]");
   const nextButton = albumCarousel.querySelector("[data-album-next]");
   const image = albumCarousel.querySelector("[data-album-image]");
@@ -82,6 +84,39 @@ if (albumCarousel instanceof HTMLElement) {
   let albums = [];
   let currentIndex = 0;
   let touchStartX = 0;
+
+  const persistAlbumChoice = () => {
+    try {
+      localStorage.setItem(
+        albumChoiceKey,
+        JSON.stringify({
+          index: currentIndex,
+          savedAt: Date.now(),
+        })
+      );
+    } catch {}
+  };
+
+  const getInitialAlbumIndex = () => {
+    try {
+      const rawChoice = localStorage.getItem(albumChoiceKey);
+      if (!rawChoice) {
+        return Math.floor(Math.random() * albums.length);
+      }
+
+      const parsedChoice = JSON.parse(rawChoice);
+      const savedAt = Number(parsedChoice?.savedAt);
+      const storedIndex = Number(parsedChoice?.index);
+      const isFresh = Number.isFinite(savedAt) && Date.now() - savedAt < albumChoiceTtlMs;
+      const isValidIndex = Number.isInteger(storedIndex) && storedIndex >= 0 && storedIndex < albums.length;
+
+      if (isFresh && isValidIndex) {
+        return storedIndex;
+      }
+    } catch {}
+
+    return Math.floor(Math.random() * albums.length);
+  };
 
   const renderDots = () => {
     if (!(dots instanceof HTMLElement)) {
@@ -99,6 +134,7 @@ if (albumCarousel instanceof HTMLElement) {
         dot.setAttribute("aria-label", `Show album ${index + 1}: ${album.title}`);
         dot.addEventListener("click", () => {
           currentIndex = index;
+          persistAlbumChoice();
           renderAlbum();
         });
         return dot;
@@ -135,6 +171,7 @@ if (albumCarousel instanceof HTMLElement) {
       link.href = album.link;
     }
 
+    persistAlbumChoice();
     renderDots();
   };
 
@@ -180,6 +217,7 @@ if (albumCarousel instanceof HTMLElement) {
       }
 
       albums = data;
+      currentIndex = getInitialAlbumIndex();
       renderAlbum();
     })
     .catch(() => {
