@@ -304,15 +304,15 @@ textarea {
 }
 
 .proof-strip-logos .proof-logo-standard {
-  height: 2.45rem;
+  height: 3.2rem;
 }
 
 .proof-strip-logos .proof-logo-compact {
-  height: 2.1rem;
+  height: 2.75rem;
 }
 
 .proof-strip-logos .proof-logo-wide {
-  height: 2.2rem;
+  height: 2.85rem;
 }
 
 .proof-strip-logos .proof-logo-retro {
@@ -337,6 +337,10 @@ textarea {
   font-family: "Space Grotesk", sans-serif;
   font-size: clamp(2.5rem, 5vw, 4.6rem);
   line-height: 0.98;
+}
+
+.page-actions {
+  margin-top: 1.5rem;
 }
 
 .section-heading {
@@ -463,6 +467,55 @@ textarea {
   line-height: 1.5;
 }
 
+.archive-band {
+  align-items: stretch;
+}
+
+.archive-intro,
+.archive-note {
+  height: 100%;
+}
+
+.archive-table-shell {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255, 250, 244, 0.82);
+  box-shadow: var(--shadow);
+}
+
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.archive-table th,
+.archive-table td {
+  padding: 1rem 1.15rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(31, 26, 23, 0.08);
+}
+
+.archive-table th {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 247, 239, 0.96);
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.archive-table td {
+  color: var(--muted);
+}
+
+.archive-table tbody tr:hover {
+  background: rgba(157, 79, 47, 0.05);
+}
+
 .work-card-featured {
   background:
     linear-gradient(145deg, rgba(157, 79, 47, 0.95), rgba(115, 53, 28, 0.9)),
@@ -531,7 +584,7 @@ textarea {
 
 .site-footer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem 0 0;
 }
@@ -610,6 +663,7 @@ textarea {
   .hero {
     padding-top: 3rem;
   }
+
 
   .site-header {
     border-radius: 28px;
