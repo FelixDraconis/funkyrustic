@@ -304,8 +304,15 @@ textarea {
 }
 
 .button-secondary {
-  border-color: var(--line);
-  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(115, 53, 28, 0.14);
+  background: linear-gradient(145deg, rgba(243, 230, 216, 0.92), rgba(235, 219, 203, 0.88));
+  color: var(--accent-dark);
+  box-shadow: 0 12px 24px rgba(68, 39, 24, 0.08);
+}
+
+.button-secondary:hover {
+  border-color: rgba(115, 53, 28, 0.22);
+  background: linear-gradient(145deg, rgba(247, 235, 222, 0.96), rgba(239, 224, 208, 0.92));
 }
 
 .hero-card {
@@ -331,7 +338,7 @@ textarea {
 }
 
 .proof-section {
-  margin: 0 0 2.5rem;
+  margin: 0 0 3.1rem;
 }
 
 .proof-heading {
@@ -455,6 +462,10 @@ textarea {
   box-shadow: 0 18px 32px rgba(68, 39, 24, 0.1);
 }
 
+.about-letter-avatar {
+  display: none;
+}
+
 .about-letter-copy {
   margin: 0.4rem 0 0;
   color: var(--muted);
@@ -494,6 +505,52 @@ textarea {
 .path-card,
 .work-card {
   padding: 1.4rem;
+}
+
+.collaborate-card {
+  display: block;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 249, 241, 0.94), rgba(247, 238, 227, 0.88));
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.collaborate-card-amber {
+  background: linear-gradient(145deg, rgba(245, 236, 224, 0.96), rgba(237, 224, 207, 0.9));
+}
+
+.collaborate-card-slate {
+  background: linear-gradient(145deg, rgba(225, 233, 239, 0.96), rgba(212, 223, 231, 0.9));
+}
+
+.collaborate-card-olive {
+  background: linear-gradient(145deg, rgba(229, 237, 226, 0.96), rgba(216, 228, 211, 0.9));
+}
+
+.collaborate-card-clay {
+  background: linear-gradient(145deg, rgba(241, 231, 223, 0.96), rgba(232, 217, 206, 0.9));
+}
+
+.collaborate-card-image {
+  display: block;
+  width: calc(100% + 2.8rem);
+  height: 10.5rem;
+  margin: -1.4rem -1.4rem 1rem;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 240ms ease;
+}
+
+.collaborate-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(115, 53, 28, 0.2);
+  box-shadow: 0 24px 42px rgba(68, 39, 24, 0.16);
+}
+
+.collaborate-card:hover .collaborate-card-image {
+  transform: scale(1.06);
 }
 
 .path-card a {
@@ -562,6 +619,16 @@ textarea {
   object-position: left center;
 }
 
+.company-wordmark {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #fff4e6;
+}
+
 .company-credit-list {
   display: grid;
   gap: 0.9rem;
@@ -584,6 +651,26 @@ textarea {
 
 .company-credit-copy {
   min-width: 0;
+}
+
+.company-link-stack {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.company-link-stack .company-link-icon {
+  width: 2.1rem;
+  height: 2.1rem;
+  flex: 0 0 auto;
+}
+
+.company-link-stack .company-link-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .company-card .company-credit-list a:hover {
@@ -1077,7 +1164,7 @@ textarea {
 }
 
 .contact-card {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .site-footer {
@@ -1124,6 +1211,11 @@ textarea {
 
 .contact-form label:last-of-type {
   grid-column: 1 / -1;
+}
+
+.contact-form textarea {
+  min-height: 14rem;
+  resize: vertical;
 }
 
 .contact-form input,
@@ -1229,5 +1321,35 @@ textarea {
 
   .portrait-image {
     min-height: 18rem;
+  }
+
+  .about-letter {
+    display: grid;
+    grid-template-columns: 5.25rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem 1.1rem;
+  }
+
+  .about-letter-avatar {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 18px;
+    object-fit: cover;
+    object-position: center top;
+    box-shadow: 0 12px 24px rgba(68, 39, 24, 0.14);
+  }
+
+  .about-letter-body {
+    min-width: 0;
+  }
+
+  .about-letter .eyebrow {
+    margin-bottom: 0.45rem;
+  }
+
+  .about-media-band .about-portrait-card {
+    display: none;
   }
 }

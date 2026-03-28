@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260328-1" />
+    <link rel="stylesheet" href="styles.css?v=20260328-5" />
   </head>
   <body>
     <div class="site-shell">
@@ -112,12 +112,52 @@
               <img class="company-logo" src="assets/companylogos/logo_epic.png" alt="Epic Games logo" />
               <ul class="company-credit-list">
                 <li>
-                  <a href="https://www.mobygames.com/game/330/unreal/" target="_blank" rel="noreferrer">Unreal</a>
-                  <span class="company-credit-role">Music and Sound</span>
+                  <div class="company-credit-row">
+                    <div class="company-credit-copy">
+                      <a href="https://www.mobygames.com/game/330/unreal/" target="_blank" rel="noreferrer">Unreal</a>
+                      <span class="company-credit-role">Music and Sound</span>
+                    </div>
+                    <a
+                      class="company-link-icon"
+                      href="https://www.youtube.com/watch?v=Ig1ZuwTjFwE&list=RDIg1ZuwTjFwE&start_radio=1"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Listen to Unreal music on YouTube"
+                      title="YouTube"
+                    >
+                      <img src="assets/linklogos/youtube_circle_128.png" alt="" />
+                    </a>
+                  </div>
                 </li>
                 <li>
-                  <a href="https://www.mobygames.com/game/587/unreal-tournament/" target="_blank" rel="noreferrer">Unreal Tournament</a>
-                  <span class="company-credit-role">Music and Sound</span>
+                  <div class="company-credit-row">
+                    <div class="company-credit-copy">
+                      <a href="https://www.mobygames.com/game/587/unreal-tournament/" target="_blank" rel="noreferrer">Unreal Tournament</a>
+                      <span class="company-credit-role">Music and Sound</span>
+                    </div>
+                    <div class="company-link-stack">
+                      <a
+                        class="company-link-icon"
+                        href="https://www.youtube.com/watch?v=ETeqKcnjRvQ&list=RDETeqKcnjRvQ&start_radio=1"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Listen to Unreal Tournament music on YouTube"
+                        title="YouTube"
+                      >
+                        <img src="assets/linklogos/youtube_circle_128.png" alt="" />
+                      </a>
+                      <a
+                        class="company-link-icon"
+                        href="https://materiacollective.bandcamp.com/album/tournament-rematch-unreal-tournament-remixed"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Listen to Tournament Rematch: Unreal Tournament Remixed on Bandcamp"
+                        title="Bandcamp"
+                      >
+                        <img src="assets/linklogos/bandcamp_circle_128.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
                 </li>
                 <li>
                   <div class="company-credit-row">
@@ -140,6 +180,37 @@
                 <li>
                   <a href="https://www.mobygames.com/game/9700/jazz-jackrabbit-2/" target="_blank" rel="noreferrer">Jazz Jackrabbit 2</a>
                   <span class="company-credit-role">Additional Music and Sound</span>
+                </li>
+              </ul>
+            </article>
+            <article class="work-card company-card">
+              <img class="company-logo" src="assets/companylogos/logo_ion_storm.png" alt="Ion Storm logo" />
+              <ul class="company-credit-list">
+                <li>
+                  <div class="company-credit-row">
+                    <div class="company-credit-copy">
+                      <a href="https://www.mobygames.com/game/1749/deus-ex/" target="_blank" rel="noreferrer">Deus Ex</a>
+                      <span class="company-credit-role">Music</span>
+                    </div>
+                    <a
+                      class="company-link-icon company-link-icon-bandcamp"
+                      href="https://alexanderbrandon.bandcamp.com/album/conspiravision-deus-ex-remixed"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Listen to Conspiravision: Deus Ex Remixed on Bandcamp"
+                      title="Bandcamp"
+                    >
+                      <img src="assets/linklogos/bandcamp_circle_128.png" alt="" />
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <a href="https://www.mobygames.com/game/1749/deus-ex/" target="_blank" rel="noreferrer">Deus Ex: The Conspiracy</a>
+                  <span class="company-credit-role">PlayStation 2 release of the original work</span>
+                </li>
+                <li>
+                  <a href="https://www.mobygames.com/game/11253/deus-ex-invisible-war/" target="_blank" rel="noreferrer">Deus Ex: Invisible War</a>
+                  <span class="company-credit-role">Music and Sound</span>
                 </li>
               </ul>
             </article>
@@ -254,94 +325,20 @@
             </article>
           </div>
 
-          <div class="tabs" role="tablist" aria-label="Work categories">
-            <button class="tab-button is-active" role="tab" aria-selected="true" data-tab="featured">
-              Featured
-            </button>
-            <button class="tab-button" role="tab" aria-selected="false" data-tab="games">
-              Games
-            </button>
-            <button class="tab-button" role="tab" aria-selected="false" data-tab="listen">
-              Listen
-            </button>
-            <button class="tab-button" role="tab" aria-selected="false" data-tab="support">
-              Buy / Support
-            </button>
-            <button class="tab-button" role="tab" aria-selected="false" data-tab="collabs">
-              Collaborations
-            </button>
-          </div>
-
-          <div class="tab-panels">
-            <section class="tab-panel is-active" role="tabpanel" data-panel="featured">
-              <div class="work-grid">
-                <article class="work-card work-card-featured">
-                  <p class="work-type">Featured</p>
-                  <h3>Signature titles, selected listening, and the best introduction to the brand.</h3>
-                  <p>Start with the work that proves Funky Rustic's range, taste, and reputation fastest.</p>
-                </article>
-                <article class="work-card">
-                  <p class="work-type">Reel</p>
-                  <h3>Embedded audio/video reel</h3>
-                  <p>Short and current, designed for anyone meeting Funky Rustic for the first time.</p>
-                </article>
-                <article class="work-card">
-                  <p class="work-type">Highlights</p>
-                  <h3>Featured soundtrack or project tiles</h3>
-                  <p>Editorialized entries that tell the company story before the full archive takes over.</p>
-                </article>
-              </div>
-            </section>
-
-            <section class="tab-panel" role="tabpanel" data-panel="games" hidden>
-              <div class="work-grid">
-                <article class="work-card">
-                  <p class="work-type">Games</p>
-                  <h3>AAA, indie, and legacy credits tied to Alex Brandon</h3>
-                  <p>Group by era, platform, role, or franchise, but keep the Funky Rustic framing intact.</p>
-                </article>
-                <article class="work-card">
-                  <p class="work-type">Archive</p>
-                  <h3>Full credits list</h3>
-                  <p>Available, but visually secondary to the curated company front door.</p>
-                </article>
-              </div>
-            </section>
-
-            <section class="tab-panel" role="tabpanel" data-panel="listen" hidden>
-              <div class="work-grid">
-                <article class="work-card">
-                  <p class="work-type">Listen</p>
-                  <h3>Albums, soundtrack cuts, and playlists</h3>
-                  <p>Ideal for both fans and prospects who want to hear what Funky Rustic sounds like right away.</p>
-                </article>
-              </div>
-            </section>
-
-            <section class="tab-panel" role="tabpanel" data-panel="support" hidden>
-              <div class="work-grid">
-                <article class="work-card">
-                  <p class="work-type">Support</p>
-                  <h3>Bandcamp, storefronts, and featured releases</h3>
-                  <p>Give fans a direct place to buy, follow, and support the Funky Rustic catalog.</p>
-                </article>
-              </div>
-            </section>
-
-            <section class="tab-panel" role="tabpanel" data-panel="collabs" hidden>
-              <div class="work-grid">
-                <article class="work-card">
-                  <p class="work-type">Collaborations</p>
-                  <h3>Guest work and creative partnerships</h3>
-                  <p>Separate from game credits so musicians and peers can understand the broader company identity.</p>
-                </article>
-              </div>
-            </section>
-          </div>
         </section>
       </main>
-    </div>
 
-    <script src="script.js?v=20260328-1"></script>
+      <footer class="site-footer">
+        <div class="footer-block">
+          <p class="eyebrow">Follow</p>
+          <div class="footer-links">
+            <a href="https://alexanderbrandon.bandcamp.com/" target="_blank" rel="noreferrer">Bandcamp</a>
+            <a href="https://www.youtube.com/results?search_query=alex+brandon+music" target="_blank" rel="noreferrer">YouTube</a>
+            <a href="https://en.wikipedia.org/wiki/Alexander_Brandon" target="_blank" rel="noreferrer">Wikipedia</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
