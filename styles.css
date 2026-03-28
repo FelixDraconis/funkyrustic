@@ -118,7 +118,7 @@ textarea {
 
 .hero-side-column {
   display: grid;
-  gap: 1.35rem;
+  gap: 1.75rem;
   align-content: start;
   justify-items: end;
 }
@@ -265,6 +265,10 @@ textarea {
   margin: 1rem 0 0;
 }
 
+.hero-home .hero-text {
+  max-width: 52ch;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -273,7 +277,7 @@ textarea {
 }
 
 .hero-actions-top {
-  margin-top: 0;
+  margin-top: 2.2rem;
   margin-bottom: 1rem;
 }
 
@@ -370,6 +374,10 @@ textarea {
 .hero-card-spotlight p:not(.card-label) {
   color: var(--muted);
   line-height: 1.6;
+}
+
+.hero-card-spotlight h2 {
+  margin-bottom: 2rem;
 }
 
 .hero-card h2 {
