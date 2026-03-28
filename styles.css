@@ -1079,9 +1079,8 @@ textarea {
 }
 
 .about-credential-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
+  display: inline-grid;
+  gap: 0.45rem;
   width: fit-content;
   max-width: 100%;
   color: var(--muted);
@@ -1094,7 +1093,7 @@ textarea {
 .about-credential-logo {
   display: block;
   width: auto;
-  height: 2rem;
+  height: 2.5rem;
   object-fit: contain;
   flex: 0 0 auto;
 }
@@ -1659,6 +1658,19 @@ textarea {
 
   .about-media-band .about-portrait-card {
     display: none;
+  }
+
+  .feature-band.about-media-band {
+    grid-template-columns: 1fr;
+  }
+
+  .about-video-card {
+    width: 100%;
+    padding: 0.85rem;
+  }
+
+  .about-video-card .video-frame {
+    padding-top: 56.25%;
   }
 
   .reel-band .reel-note,
