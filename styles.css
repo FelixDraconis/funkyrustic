@@ -1700,6 +1700,7 @@ textarea {
   }
 
   .hero-intro-image {
+    height: 21.5rem;
     object-position: right center;
   }
 
