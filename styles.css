@@ -266,7 +266,7 @@ textarea {
 }
 
 .hero-home .hero-text {
-  max-width: 52ch;
+  max-width: 62ch;
 }
 
 .hero-actions {
@@ -1704,7 +1704,6 @@ textarea {
   }
 
   .hero-intro-image {
-    height: 21.5rem;
     object-position: right center;
   }
 
