@@ -80,6 +80,7 @@ if (albumCarousel instanceof HTMLElement) {
   const link = albumCarousel.querySelector("[data-album-link]");
   const dots = albumCarousel.querySelector("[data-album-dots]");
   const slide = albumCarousel.querySelector("[data-album-slide]");
+  const fallback = albumCarousel.querySelector("[data-album-fallback]");
 
   let albums = [];
   let currentIndex = 0;
@@ -140,6 +141,41 @@ if (albumCarousel instanceof HTMLElement) {
         return dot;
       })
     );
+  };
+
+  const setAlbumUnavailable = () => {
+    albumCarousel.classList.add("is-unavailable");
+
+    if (fallback instanceof HTMLElement) {
+      fallback.hidden = false;
+    }
+
+    if (title instanceof HTMLElement) {
+      title.textContent = "Album spotlight unavailable";
+    }
+
+    if (image instanceof HTMLImageElement) {
+      image.removeAttribute("src");
+      image.alt = "";
+    }
+
+    if (imageLink instanceof HTMLAnchorElement) {
+      imageLink.removeAttribute("href");
+      imageLink.setAttribute("aria-disabled", "true");
+    }
+
+    if (link instanceof HTMLAnchorElement) {
+      link.removeAttribute("href");
+      link.setAttribute("aria-disabled", "true");
+    }
+
+    if (prevButton instanceof HTMLButtonElement) {
+      prevButton.disabled = true;
+    }
+
+    if (nextButton instanceof HTMLButtonElement) {
+      nextButton.disabled = true;
+    }
   };
 
   const renderAlbum = () => {
@@ -213,6 +249,7 @@ if (albumCarousel instanceof HTMLElement) {
     .then((response) => response.json())
     .then((data) => {
       if (!Array.isArray(data) || data.length === 0) {
+        setAlbumUnavailable();
         return;
       }
 
@@ -221,11 +258,6 @@ if (albumCarousel instanceof HTMLElement) {
       renderAlbum();
     })
     .catch(() => {
-      if (title instanceof HTMLElement) {
-        title.textContent = "Album spotlight unavailable";
-      }
-      if (link instanceof HTMLAnchorElement) {
-        link.removeAttribute("href");
-      }
+      setAlbumUnavailable();
     });
 }

@@ -500,6 +500,69 @@ textarea {
   line-height: 0.98;
 }
 
+.error-page {
+  padding-top: 4.25rem;
+  padding-bottom: 2.5rem;
+}
+
+.error-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(18rem, 0.9fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.error-copy-card,
+.error-figure {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.error-copy-card {
+  padding: 2rem;
+  background:
+    radial-gradient(circle at top right, rgba(157, 79, 47, 0.12), transparent 34%),
+    linear-gradient(145deg, rgba(249, 241, 232, 0.96), rgba(241, 230, 216, 0.92));
+}
+
+.error-copy-card h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 0.96;
+  max-width: 10ch;
+}
+
+.error-copy-card .section-text {
+  max-width: 34rem;
+  margin-top: 1rem;
+}
+
+.error-figure {
+  margin: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(234, 225, 214, 0.95), rgba(223, 212, 198, 0.9));
+}
+
+.error-image {
+  display: block;
+  width: 100%;
+  min-height: 32rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.error-caption {
+  padding: 1rem 1.2rem 1.25rem;
+  color: var(--accent-dark);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 .page-actions {
   margin-top: 1.5rem;
 }
@@ -689,6 +752,27 @@ textarea {
 
 .album-carousel-home {
   margin-top: 0;
+}
+
+.album-carousel-fallback {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.album-carousel-fallback a {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.album-carousel-fallback-visible {
+  display: block;
+}
+
+.album-carousel.is-unavailable .album-carousel-stage {
+  display: none;
 }
 
 .album-carousel-actions {
@@ -1645,6 +1729,14 @@ textarea {
 
   .contact-form {
     grid-template-columns: 1fr;
+  }
+
+  .error-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .error-image {
+    min-height: 22rem;
   }
 
   .brand {
