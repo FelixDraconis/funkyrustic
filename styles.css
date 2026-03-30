@@ -1703,6 +1703,11 @@ textarea {
     object-position: right center;
   }
 
+  .hero-copy {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .hero-copy,
   .hero-card,
   .info-card,
