@@ -1699,6 +1699,10 @@ textarea {
     width: min(100% - 1rem, 100%);
   }
 
+  .hero-intro-image {
+    object-position: right center;
+  }
+
   .hero-copy,
   .hero-card,
   .info-card,
