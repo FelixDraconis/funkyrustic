@@ -1699,6 +1699,10 @@ textarea {
     width: min(100% - 1rem, 100%);
   }
 
+  .hero {
+    padding-top: 1.5rem;
+  }
+
   .hero-intro-image {
     height: 21.5rem;
     object-position: right center;
