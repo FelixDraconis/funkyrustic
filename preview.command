@@ -23,6 +23,15 @@ cleanup() {
 trap cleanup EXIT INT TERM
 
 sleep 1
+
+if ! kill -0 "$SERVER_PID" >/dev/null 2>&1; then
+  echo
+  echo "Preview server failed to start."
+  echo "Recent log output:"
+  sed -n '1,20p' /tmp/funkyrustic-preview.log
+  exit 1
+fi
+
 open "$URL"
 
 wait "$SERVER_PID"
